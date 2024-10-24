@@ -14,9 +14,7 @@ function hideElementsBasedOnURL() {
             document.querySelector('#page-manager').remove()
         }
 
-        if (!location.href.includes('watch')) {
-            document.querySelector('#columns').remove()
-        } else {
+        if (location.href.includes('watch')) {
             document.querySelector('#items').remove()
             document.querySelector('#below').remove()
         }
