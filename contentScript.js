@@ -1,6 +1,6 @@
 // Function to hide specific elements based on the URL
 function hideElementsBasedOnURL() {
-    if (location.href.includes('youtube')) {
+    if (location.href.includes('https://youtube.com') || location.href.includes('www.youtube.com')) {
         if (!location.href.includes('search_query') &&
             !location.href.includes('watch')) {
             const youtubeContents = document.querySelector('#contents');
@@ -11,12 +11,21 @@ function hideElementsBasedOnURL() {
             if (shortsContainer) {
                 shortsContainer.style.display = 'none';
             }
-            document.querySelector('#page-manager').remove()
+            const pageManager = document.querySelector('#page-manager');
+            if (pageManager) {
+                pageManager.remove();
+            }
         }
 
         if (location.href.includes('watch')) {
-            document.querySelector('#items').remove()
-            document.querySelector('#below').remove()
+            const items = document.querySelector('#items');
+            if (items) {
+                items.remove();
+            }
+            const below = document.querySelector('#below');
+            if (below) {
+                below.remove();
+            }
         }
     }
 
