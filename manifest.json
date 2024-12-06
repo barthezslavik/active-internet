@@ -1,15 +1,19 @@
 {
   "name": "Active Internet",
-  "action": {},
   "manifest_version": 3,
   "version": "0.1",
   "description": "",
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "storage",
+    "tabs"
   ],
   "background": {
     "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Toggle Extension"
   },
   "content_scripts": [
     {
