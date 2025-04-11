@@ -55,9 +55,6 @@ function hideElementsBasedOnURL() {
       } else {
         // Remove event listeners and observers
         removeEventListenersAndObservers();
-  
-        // Optionally, reload the page to undo changes
-        // location.reload();
       }
     });
   }
@@ -125,9 +122,6 @@ function hideElementsBasedOnURL() {
         window.extensionObservers.observer.disconnect();
       window.extensionObservers = null;
     }
-  
-    // Optionally, reload the page to undo changes
-    // location.reload();
   }
   
   // Initialize when the content script loads
